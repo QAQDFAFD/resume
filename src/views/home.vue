@@ -9,7 +9,7 @@
         </div>
 
         <div class="contact">
-            <h4>个人链接</h4>
+            <h3>个人链接</h3>
             <hr>
             <div class="blogs">
                 个人主页: <strong><a :href="website" target="_blank">{{ info.website }}</a></strong>
@@ -26,27 +26,33 @@
         </div>
 
         <div class="edu">
-            <h4>教育背景</h4>
+            <h3>教育背景</h3>
             <hr>
             <List :source="info.edus"></List>
         </div>
 
         <div class="skills">
-            <h4>技能清单</h4>
+            <h3>技能清单</h3>
             <hr>
             <Skills :skills="info.skills"></Skills>
         </div>
 
         <div v-if="works" class="interns">
-            <h4>工作经历</h4>
+            <h3>工作经历</h3>
             <hr>
             <List :source="info.works"></List>
         </div>
 
         <div class="projects">
-            <h4>项目经历</h4>
+            <h3>项目经历</h3>
             <hr>
             <Project :opt="info.projects"></Project>
+        </div>
+
+        <div class="skills">
+            <h3>荣誉证书</h3>
+            <hr>
+            <Honor :honor="info.honor"></Honor>
         </div>
     </div>
 </template>
@@ -55,9 +61,44 @@
 import List from '../components/List.vue';
 import Skills from '../components/Skills.vue';
 import Project from '../components/Project.vue';
+import Honor from '../components/Honor.vue';
 import info from '../assets/info';
 
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.info {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    >p {
+        text-align: center;
+    }
+}
+
+.contact {
+    margin-bottom: 1rem;
+}
+
+.edu {
+    margin-bottom: 1rem;
+}
+
+.skills {
+    margin-bottom: 1rem;
+}
+
+.interns {
+    margin-bottom: 1rem;
+}
+
+.projects {
+    margin-bottom: 1rem;
+}
+</style>
