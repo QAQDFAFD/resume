@@ -27,7 +27,7 @@ export default {
     ],
     skills: {
         techs: ['Vue.js', 'HTML5', 'JavaScript', 'Node.js', 'uni-app', 'TypeScript', 'ES6', 'CSS3', 'SCSS'],
-        tests: ['Jest'],
+        // tests: ['Jest'],
     },
     works: [
         {
