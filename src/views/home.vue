@@ -11,9 +11,9 @@
         <div class="contact">
             <h3>个人链接</h3>
             <hr>
-            <div class="blogs">
+            <!-- <div class="blogs">
                 个人主页: <strong><a :href="website" target="_blank">{{ info.website }}</a></strong>
-            </div>
+            </div> -->
             <div class="links">
                 Github: <strong><a :href="github" target="_blank">{{ info.github }}</a></strong>
             </div>
