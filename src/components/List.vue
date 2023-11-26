@@ -28,16 +28,15 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from 'vue'
 const props = defineProps({
     source: {
         type: Array,
         required: true
     }
 })
-const renderLeft = (left) => {
-    return left.replace(/\*([\w.\s&()\/+,，、-]+)\*/g, '<strong>$1</strong>');
-
+const renderLeft = left => {
+    return left.replace(/\*([\w.\s&()\/+,，、-]+)\*/g, '<strong>$1</strong>')
 }
 </script>
 
