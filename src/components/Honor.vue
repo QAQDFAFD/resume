@@ -37,10 +37,10 @@ const props = defineProps({
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-quaternary) 100%);
   border-radius: 12px;
-  border-left: 4px solid #ffa726;
-  box-shadow: 0 2px 8px rgba(255, 167, 38, 0.15);
+  border-left: 4px solid var(--honor-gold);
+  box-shadow: 0 2px 8px var(--shadow-light);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -59,8 +59,8 @@ const props = defineProps({
 
   &:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(255, 167, 38, 0.25);
-    border-left-color: #ff9800;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    border-left-color: var(--honor-gold);
 
     &::before {
       transform: scale(1);
@@ -72,32 +72,32 @@ const props = defineProps({
   }
 
   &:nth-child(even) {
-    background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
-    border-left-color: #66bb6a;
-    box-shadow: 0 2px 8px rgba(102, 187, 106, 0.15);
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-quaternary) 100%);
+    border-left-color: var(--honor-green);
+    box-shadow: 0 2px 8px var(--shadow-light);
 
     &::before {
       background: radial-gradient(circle, rgba(102, 187, 106, 0.1) 0%, transparent 70%);
     }
 
     &:hover {
-      box-shadow: 0 8px 25px rgba(102, 187, 106, 0.25);
-      border-left-color: #4caf50;
+      box-shadow: 0 8px 25px var(--shadow-medium);
+      border-left-color: var(--honor-green);
     }
   }
 
   &:nth-child(3n) {
-    background: linear-gradient(135deg, #f0f4ff 0%, #e8f2ff 100%);
-    border-left-color: #667eea;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-quaternary) 100%);
+    border-left-color: var(--honor-blue);
+    box-shadow: 0 2px 8px var(--shadow-light);
 
     &::before {
       background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
     }
 
     &:hover {
-      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.25);
-      border-left-color: #764ba2;
+      box-shadow: 0 8px 25px var(--shadow-medium);
+      border-left-color: var(--honor-blue);
     }
   }
 }
@@ -117,10 +117,11 @@ const props = defineProps({
 
 .honor-text {
   font-weight: 600;
-  color: #2c3e50;
+  color: var(--text-primary);
   font-size: 1rem;
   line-height: 1.5;
   display: block;
+  transition: color 0.3s ease;
 }
 
 // 响应式设计

@@ -3,6 +3,11 @@
     <div class="resume-content">
       <!-- 个人信息头部 -->
       <div class="header-section">
+        <!-- 主题切换按钮 -->
+        <div class="theme-toggle-wrapper">
+          <ThemeToggle />
+        </div>
+
         <div class="personal-info">
           <h1 class="name">
             {{ info.name }}
@@ -107,6 +112,7 @@ import List from '../components/List.vue'
 import Skills from '../components/Skills.vue'
 import Project from '../components/Project.vue'
 import Honor from '../components/Honor.vue'
+import ThemeToggle from '../components/ThemeToggle.vue'
 import info from '../assets/info'
 
 const goGithub = () => {
@@ -117,22 +123,24 @@ const goGithub = () => {
 <style lang="scss" scoped>
 .resume-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--gradient-bg);
   padding: 2rem 1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s ease;
 }
 
 .resume-content {
   max-width: 900px;
   margin: 0 auto;
-  background: #ffffff;
+  background: var(--bg-secondary);
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 60px var(--shadow-light);
   overflow: hidden;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-primary);
   padding: 3rem 2rem;
   text-align: center;
   color: white;
@@ -152,6 +160,18 @@ const goGithub = () => {
   .personal-info {
     position: relative;
     z-index: 1;
+  }
+}
+
+.theme-toggle-wrapper {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    right: 1rem;
   }
 }
 
@@ -212,11 +232,11 @@ const goGithub = () => {
 
 .section-card {
   padding: 2.5rem;
-  border-bottom: 1px solid #f0f2f5;
+  border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease;
 
   &:hover {
-    background: #fafbfc;
+    background: var(--bg-tertiary);
   }
 
   &:last-child {
@@ -231,15 +251,16 @@ const goGithub = () => {
 .section-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
   position: relative;
   display: inline-block;
+  transition: color 0.3s ease;
 }
 
 .section-divider {
   height: 3px;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-primary);
   border-radius: 2px;
   width: 60px;
   margin-bottom: 1rem;
@@ -256,32 +277,33 @@ const goGithub = () => {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: #f8f9fa;
+  background: var(--bg-tertiary);
   border-radius: 10px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--accent-color);
   transition: all 0.3s ease;
 
   &:hover {
-    background: #e9ecef;
+    background: var(--bg-quaternary);
     transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    box-shadow: 0 4px 12px var(--shadow-medium);
   }
 }
 
 .link-label {
   font-weight: 600;
-  color: #495057;
+  color: var(--text-secondary);
   min-width: 80px;
+  transition: color 0.3s ease;
 }
 
 .link-url {
-  color: #667eea;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
 
   &:hover {
-    color: #764ba2;
+    color: var(--accent-hover);
     text-decoration: underline;
   }
 }

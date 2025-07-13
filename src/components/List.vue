@@ -58,30 +58,32 @@ ul {
 .item {
   margin-bottom: 1.5rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-quaternary) 100%);
   border-radius: 12px;
-  border-left: 4px solid #667eea;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+  border-left: 4px solid var(--accent-color);
+  box-shadow: 0 2px 8px var(--shadow-light);
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
-    border-left-color: #764ba2;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    border-left-color: var(--accent-hover);
   }
 
   .left {
     flex: 1;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--text-primary);
     line-height: 1.6;
+    transition: color 0.3s ease;
   }
 
   .right {
     font-weight: 500;
-    color: #6c757d;
+    color: var(--text-tertiary);
     white-space: nowrap;
     font-size: 0.95rem;
+    transition: color 0.3s ease;
   }
 
   small {
@@ -94,29 +96,31 @@ ul {
   font-size: 0.9em;
   margin-bottom: 1rem;
   padding: 1rem 1.5rem;
-  background: #ffffff;
+  background: var(--bg-secondary);
   border-radius: 8px;
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 
   &:hover {
-    background: #f8f9fa;
-    border-color: #667eea;
+    background: var(--bg-tertiary);
+    border-color: var(--accent-color);
   }
 
   .left {
     font-weight: 500;
-    color: #495057;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
   }
 
   .right {
-    color: #6c757d;
+    color: var(--text-tertiary);
     font-size: 0.9rem;
+    transition: color 0.3s ease;
   }
 }
 
 .link {
-  color: #667eea;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -125,7 +129,7 @@ ul {
   background: rgba(102, 126, 234, 0.1);
 
   &:hover {
-    color: #764ba2;
+    color: var(--accent-hover);
     background: rgba(102, 126, 234, 0.2);
     text-decoration: none;
     transform: scale(1.05);

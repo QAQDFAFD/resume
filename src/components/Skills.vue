@@ -41,16 +41,16 @@ const props = defineProps({
 }
 
 .skill-category {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-quaternary) 100%);
   border-radius: 12px;
   padding: 1.5rem;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid var(--accent-color);
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
-    border-left-color: #764ba2;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    border-left-color: var(--accent-hover);
   }
 }
 
@@ -63,10 +63,11 @@ const props = defineProps({
 .skill-label {
   font-weight: 700;
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: color 0.3s ease;
 
   &::before {
     content: '🔧';
@@ -105,8 +106,9 @@ const props = defineProps({
 
 .test-tag {
   background: linear-gradient(135deg, #a8e6cf 0%, #88d8a3 100%);
-  color: #2c3e50;
+  color: var(--text-primary);
   box-shadow: 0 2px 8px rgba(168, 230, 207, 0.25);
+  transition: color 0.3s ease;
 
   &:hover {
     box-shadow: 0 4px 15px rgba(168, 230, 207, 0.35);

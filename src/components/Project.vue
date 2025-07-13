@@ -78,11 +78,11 @@ const props = defineProps({
 }
 
 .project-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
   border-radius: 16px;
   padding: 2rem;
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.08);
-  border: 1px solid #e9ecef;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -94,13 +94,13 @@ const props = defineProps({
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
   }
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.15);
-    border-color: #667eea;
+    box-shadow: 0 12px 40px var(--shadow-medium);
+    border-color: var(--accent-color);
   }
 }
 
@@ -108,13 +108,13 @@ const props = defineProps({
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-primary);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25);
+  box-shadow: 0 2px 8px var(--shadow-light);
 }
 
 .company-icon {
@@ -127,7 +127,7 @@ const props = defineProps({
   align-items: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #e9ecef;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .project-name {
@@ -135,8 +135,9 @@ const props = defineProps({
   align-items: center;
   gap: 0.75rem;
   font-size: 1.3rem;
-  color: #2c3e50;
+  color: var(--text-primary);
   flex: 1;
+  transition: color 0.3s ease;
 }
 
 .project-icon {
@@ -147,11 +148,12 @@ const props = defineProps({
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #6c757d;
+  color: var(--text-tertiary);
   font-size: 1rem;
-  background: #f8f9fa;
+  background: var(--bg-tertiary);
   padding: 0.5rem 1rem;
   border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
 .time-icon {
@@ -171,8 +173,9 @@ const props = defineProps({
   align-items: center;
   gap: 0.5rem;
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
 }
 
 .section-icon {
@@ -180,17 +183,18 @@ const props = defineProps({
 }
 
 .section-content {
-  color: #495057;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
   padding: 1rem;
-  background: #f8f9fa;
+  background: var(--bg-tertiary);
   border-radius: 8px;
-  border-left: 3px solid #667eea;
+  border-left: 3px solid var(--accent-color);
+  transition: all 0.3s ease;
 
   &.highlight {
-    background: linear-gradient(135deg, #f0f4ff 0%, #e8f2ff 100%);
-    border-left-color: #764ba2;
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-quaternary) 100%);
+    border-left-color: var(--accent-hover);
     font-weight: 500;
   }
 }
@@ -226,9 +230,9 @@ const props = defineProps({
 .responsibility-item {
   position: relative;
   padding: 0.75rem 0 0.75rem 2rem;
-  color: #495057;
+  color: var(--text-secondary);
   line-height: 1.6;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease;
 
   &::before {
@@ -249,7 +253,7 @@ const props = defineProps({
   }
 
   &:hover {
-    background: #f8f9fa;
+    background: var(--bg-tertiary);
     padding-left: 2.5rem;
   }
 
